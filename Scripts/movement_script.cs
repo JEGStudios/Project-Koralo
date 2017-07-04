@@ -12,12 +12,17 @@ public class movement_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey ("d"))
+		
+		//Strings de Movimiento
+		string derecha = "d"
+		string izquierda = "a"
+		
+		if(Input.GetKey (derecha))
         {
             Flip("right");
             transform.Translate(0.1f, 0f, 0f);
         }
-        if(Input.GetKey ("a"))
+        if(Input.GetKey (izquierda))
         {
             Flip("left");
             transform.Translate(-0.1f, 0f, 0f);
