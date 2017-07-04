@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,17 +12,12 @@ public class movement_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		//Strings de Movimiento
-		string derecha = "d"
-		string izquierda = "a"
-		
-		if(Input.GetKey (derecha))
+		if(Input.GetKey ("d"))
         {
             Flip("right");
             transform.Translate(0.1f, 0f, 0f);
         }
-        if(Input.GetKey (izquierda))
+        if(Input.GetKey ("a"))
         {
             Flip("left");
             transform.Translate(-0.1f, 0f, 0f);
