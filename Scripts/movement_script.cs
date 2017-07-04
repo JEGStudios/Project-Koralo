@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class movement_script : MonoBehaviour {
+	public float speed = 0.1;
+	public float nspeed = -0.1;
 
 	// Use this for initialization
 	void Start () {
@@ -15,12 +17,12 @@ public class movement_script : MonoBehaviour {
 		if(Input.GetKey ("d"))
         {
             Flip("right");
-            transform.Translate(0.1f, 0f, 0f);
+            transform.Translate(speed, 0f, 0f);
         }
         if(Input.GetKey ("a"))
         {
             Flip("left");
-            transform.Translate(-0.1f, 0f, 0f);
+            transform.Translate(nspeed, 0f, 0f);
         }
 	}
     public void Flip(string direction)
