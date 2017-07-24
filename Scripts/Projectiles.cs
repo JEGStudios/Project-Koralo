@@ -30,12 +30,12 @@ public class Player2 : MonoBehaviour {
             {
                 Vector3 bulletScreenPos = Camera.main.WorldToScreenPoint(goBullet.transform.position);
                 goBullet.transform.Translate(new Vector3(target.x, target.y) * Time.deltaTime * speed);
-                if(bulletScreenPos.y >= Screen.height || bulletScreenPos.x == Screen.height)
+                if(bulletScreenPos.y >= Screen.height || bulletScreenPos.x == Screen.height) //bulletScreenPos.x == Screen.height Está puesto porque antes no sé porque algunas balas no hacian despawn :/
                 {
                     DestroyObject(goBullet);
                     Projectiles.Remove(goBullet);
                 }
-                if(bulletScreenPos.x >= Screen.width || bulletScreenPos.x == Screen.width)
+                if(bulletScreenPos.x >= Screen.width || bulletScreenPos.x == Screen.width) //bulletScreenPos.x == Screen.width Está puesto porque antes no sé porque algunas balas no hacian despawn :/
                 {
                     DestroyObject(goBullet);
                     Projectiles.Remove(goBullet);
