@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2 : MonoBehaviour {
+public class Projectiles : MonoBehaviour {
 
     public float speed = 1.5f;
     private Vector3 target;
