@@ -43,11 +43,4 @@ public class Player2 : MonoBehaviour {
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.name == "enemy")
-        {
-            Debug.Log("OnCollisionEnter2D was called!");
-        }
-    }
 }
