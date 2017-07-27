@@ -7,7 +7,9 @@ public class movement_script : MonoBehaviour {
 	
 	//Variables velocidad
 	public float speed = 0.1;
-	public float nspeed = -0.1;
+	public string up = "w";
+	public string right = "d";
+	public string left = "a";
 
 	// Use this for initialization
 	void Start () {
@@ -16,15 +18,15 @@ public class movement_script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey ("d")) //Checks if the "d" button is pressed
+		if(Input.GetKey (right)) //Checks if the "d" button is pressed
         {
             Flip("right");
             transform.Translate(speed, 0f, 0f);
         }
-        if(Input.GetKey ("a")) //Checks if the "a" button is pressed
+        if(Input.GetKey (left)) //Checks if the "a" button is pressed
         {
             Flip("left");
-            transform.Translate(nspeed, 0f, 0f);
+            transform.Translate(-speed, 0f, 0f);
         }
 	}
     public void Flip(string direction) //Function flip
