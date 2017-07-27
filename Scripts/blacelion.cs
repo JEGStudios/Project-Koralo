@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class blacelion : MonoBehaviour {
+public class cameraPlayer : MonoBehaviour {
 
 	private Transform player;
 	public GameObject protagonist;
